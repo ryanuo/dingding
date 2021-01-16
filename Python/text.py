@@ -24,10 +24,16 @@ webhook = 'https://oapi.dingtalk.com/robot/send?access_token=93626b52101459cbaae
 #"at": {"atMobiles": "['"+ mobile + "']"
 data = {
     #定义内容
-    "msgtype": "text",
-    "text": {"content": '我就是我,不一样的烟火'},
-    "isAtAll": True
-        
+    "msgtype": "text", 
+    "text": {
+        "content": "我就是我, 是不一样的烟火"
+    }, 
+    "at": {
+        "atMobiles": [
+        ], 
+        "isAtAll": 1
+    }
+
     }
 res = requests.post(webhook, data=json.dumps(data), headers=headers)   #发送post请求
 
