@@ -25,6 +25,9 @@ jobs:
         pip install requests lxml
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Run misson
+    #这里放路径
       run: |
-        python Python/text.py 
+        python Python/markdown.py
+        python Python/text.py   
         python Python/link.py
+        python Python/actioncard.py
