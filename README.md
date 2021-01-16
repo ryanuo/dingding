@@ -10,6 +10,8 @@
 - Android7-9
 - 安装auto.js-4.11版本的软件
 - Tasker配置
+- 增加auto_pro_js
+-  Virtual Xposed也可自定义事件等等
 
 ## 基本操作
 
