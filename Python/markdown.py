@@ -33,7 +33,7 @@ data = {
           "atMobiles": [
               ""
           ],
-          "isAtAll": true
+          "isAtAll": True
       }   
     }
 res = requests.post(webhook, data=json.dumps(data), headers=headers)   #发送post请求

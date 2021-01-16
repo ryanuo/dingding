@@ -24,7 +24,7 @@ webhook = 'https://oapi.dingtalk.com/robot/send?access_token=93626b52101459cbaae
 #"at": {"atMobiles": "['"+ mobile + "']"
 data = {
     #定义内容
-        "msgtype": "actionCard"
+        
         "actionCard": {
         "title": "Harryの心阁", 
         "text": "![screenshot](https://gw.alicdn.com/tfs/TB1ut3xxbsrBKNjSZFpXXcXhFXa-846-786.png) 
@@ -33,7 +33,8 @@ data = {
         "btnOrientation": "0", 
         "singleTitle" : "阅读全文",
         "singleURL" : "https://u.mr90.top"
-    }, 
+    },
+    "msgtype": "actionCard"
 
     
     }
