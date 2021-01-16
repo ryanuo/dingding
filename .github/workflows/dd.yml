@@ -27,3 +27,4 @@ jobs:
     - name: Run misson
       run: |
         python Python/text.py 
+        python Python/link.py
