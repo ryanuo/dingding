@@ -11,7 +11,12 @@
 - 安装auto.js-4.11版本的软件
 - Tasker配置
 - 增加auto_pro_js
--  Virtual Xposed也可自定义事件等等
+- Virtual Xposed也可自定义事件等等
+
+## 仓库内容
+
+- APK 为执行签到命令时所用的软件
+- Python 为钉钉机器人发送消息命令(与签到无关)
 
 ## 基本操作
 
