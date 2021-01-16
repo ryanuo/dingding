@@ -27,8 +27,4 @@ jobs:
     - name: Run misson
     #这里放路径
       run: |
-        python Python/text.py   
-        python Python/link.py
-        python Python/feedcard.py
-        python Python/markdown.py
         python Python/actioncard.py

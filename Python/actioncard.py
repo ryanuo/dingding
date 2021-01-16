@@ -27,13 +27,12 @@ data = {
         
         "actionCard": {
         "title": "Harryの心阁", 
-        "text": "![screenshot](https://gw.alicdn.com/tfs/TB1ut3xxbsrBKNjSZFpXXcXhFXa-846-786.png) \n ### 你必须非常努力
-        You have to work really hard to look effortless", 
+        "text": "![screenshot](https://gw.alicdn.com/tfs/TB1ut3xxbsrBKNjSZFpXXcXhFXa-846-786.png) \n ### 你必须非常努力 \nYou have to work really hard to look effortless", 
         "btnOrientation": "0", 
         "singleTitle" : "阅读全文",
         "singleURL" : "https://u.mr90.top"
     },
-    "msgtype": "actionCard"   
+    "msgtype": "actionCard"  
     }
 res = requests.post(webhook, data=json.dumps(data), headers=headers)   #发送post请求
 
