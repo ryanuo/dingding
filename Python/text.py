@@ -5,7 +5,7 @@ import base64
 import urllib.parse
 
 timestamp = str(round(time.time() * 1000))
-secret = ''
+secret = 'SECa8a2f029a96554a302dedfff0abbd7eb0e114e15181717d627591dc5d225026d'
 secret_enc = secret.encode('utf-8')
 string_to_sign = '{}\n{}'.format(timestamp, secret)
 string_to_sign_enc = string_to_sign.encode('utf-8')
@@ -25,7 +25,7 @@ webhook = 'https://oapi.dingtalk.com/robot/send?access_token=93626b52101459cbaae
 data = {
     #定义内容
     "msgtype": "text",
-    "text": {"content": '我就是我'},
+    "text": {"content": '我就是我,不一样的烟火'},
     "isAtAll": True
     
     }
