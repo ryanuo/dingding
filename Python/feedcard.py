@@ -24,10 +24,21 @@ webhook = 'https://oapi.dingtalk.com/robot/send?access_token=93626b52101459cbaae
 #"at": {"atMobiles": "['"+ mobile + "']"
 data = {
     #定义内容
-    "msgtype": "text",
-    "text": {"content": '我就是我,不一样的烟火'},
-    "isAtAll": True
-        
+"feedCard": {
+        "links": [
+            {
+                "title": "时代的火车向前开", 
+                "messageURL": "https://www.dingtalk.com/s?__biz=MzA4NjMwMTA2Ng==&mid=2650316842&idx=1&sn=60da3ea2b29f1dcc43a7c8e4a7c97a16&scene=2&srcid=09189AnRJEdIiWVaKltFzNTw&from=timeline&isappinstalled=0&key=&ascene=2&uin=&devicetype=android-23&version=26031933&nettype=WIFI", 
+                "picURL": "https://www.dingtalk.com/"
+            },
+            {
+                "title": "时代的火车向前开2", 
+                "messageURL": "https://www.dingtalk.com/s?__biz=MzA4NjMwMTA2Ng==&mid=2650316842&idx=1&sn=60da3ea2b29f1dcc43a7c8e4a7c97a16&scene=2&srcid=09189AnRJEdIiWVaKltFzNTw&from=timeline&isappinstalled=0&key=&ascene=2&uin=&devicetype=android-23&version=26031933&nettype=WIFI", 
+                "picURL": "https://www.dingtalk.com/"
+            }
+        ]
+    }, 
+    "msgtype": "feedCard" 
     }
 res = requests.post(webhook, data=json.dumps(data), headers=headers)   #发送post请求
 
