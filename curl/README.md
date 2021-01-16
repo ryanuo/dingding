@@ -1,7 +1,7 @@
 ## 发送形式
 ```
 #!/bin/bash
-curl 'https://oapi.dingtalk.com/robot/send?access_token=xxx' \
+curl 'https://oapi.dingtalk.com/robot/send?access_token=填入自己的钉钉机器人链接' \
    -H 'Content-Type: application/json' \
    -d '{
     ##这里填写下方格式
@@ -40,7 +40,7 @@ curl 'https://oapi.dingtalk.com/robot/send?access_token=xxx' \
      "msgtype": "markdown",
      "markdown": {
          "title":"xxx的签到机器人",
-         "text": "### 签到 (xxx的签到机器人) \n> ## xxx在山西省吕梁市孝义市签到\n> #### 签到时间：08：30 \n> #### 备注：健康 \n> #### 体温：36.2 \n> #### 家庭住址与现住址是否一样：是 \n> #### 是否接触过病例患者：否 \n> ![screenshot](https://cdn.mr90.top/demo/wxpagecover/0/%E4%B8%8B%E8%BD%BD.jpg)\n> ###### 8点半发布 [Harry](https://u.mr90.top) \n"
+         "text": "### 签到 (xxx的签到机器人) \n> ## xxx在xx省xx市xx市签到\n> #### 签到时间：08：30 \n> #### 备注：健康 \n> #### 体温：36.2 \n> #### 家庭住址与现住址是否一样：是 \n> #### 是否接触过病例患者：否 \n> ![screenshot](https://cdn.mr90.top/demo/wxpagecover/0/%E4%B8%8B%E8%BD%BD.jpg)\n> ###### 8点半发布 [Harry](https://u.mr90.top) \n"
      },
       "at": {
           "atMobiles": [
@@ -61,7 +61,7 @@ curl 'https://oapi.dingtalk.com/robot/send?access_token=xxx' \
      "msgtype": "markdown",
      "markdown": {
          "title":"xxx的签到机器人",
-         "text": "##### 签到 (xxx的签到机器人) \n #### xxx在山西省吕梁市孝义市签到\n> ##### 签到时间：**08：30** \n> ##### 备注：**健康** \n> ##### 体温：**36.2** \n> ##### 家庭住址与现住址是否一样：**是** \n> ##### 是否接触过病例患者：**否** \n> ![screenshot](https://cdn.mr90.top/demo/wxpagecover/0/%E4%B8%8B%E8%BD%BD.jpg)\n> ###### 8点半发布 [Harry](https://u.mr90.top) \n"
+         "text": "##### 签到 (xxx的签到机器人) \n #### xxx在xx省xx市xx市签到\n> ##### 签到时间：**08：30** \n> ##### 备注：**健康** \n> ##### 体温：**36.2** \n> ##### 家庭住址与现住址是否一样：**是** \n> ##### 是否接触过病例患者：**否** \n> ![screenshot](https://cdn.mr90.top/demo/wxpagecover/0/%E4%B8%8B%E8%BD%BD.jpg)\n> ###### 8点半发布 [Harry](https://u.mr90.top) \n"
      },
       "at": {
           "atMobiles": [
@@ -76,7 +76,7 @@ curl 'https://oapi.dingtalk.com/robot/send?access_token=xxx' \
 
 ```
 #!/bin/bash
-curl 'https://oapi.dingtalk.com/robot/send?access_token=8151f9b4e77b51702ff264004cfe2ee2939d6456a3e7d14aa90b0671eda81e38' \
+curl 'https://oapi.dingtalk.com/robot/send?access_token=xxx' \
    -H 'Content-Type: application/json' \
    -d '{
      "msgtype": "markdown",
@@ -94,3 +94,5 @@ curl 'https://oapi.dingtalk.com/robot/send?access_token=8151f9b4e77b51702ff26400
 ```
 
 ## 其他形式看官方文档即可
+
+- [官方文档](https://ding-doc.dingtalk.com/doc#/serverapi3/iydd5h)
