@@ -2,14 +2,20 @@ device.wakeUp() //唤醒屏幕
 sleep(1000);
 "auto";
 /**
- * 模拟一个向上滑动手势：
+ * 同时模拟一个个手势：
  * 从(300, 1400)到(300, 400)
- * 每一个的时长都为1250毫秒
+ * 每一个的时长都为350毫秒
  */
-gestures([1250, [300, 1400], [300, 400]]);
-function tim(){
+gestures([1200, [300, 1400], [300, 400]]);
+/*var passworld = "xxxxxx"
+var len = passworld.length
+toast(len)
+for(var i = 0; i<=len;i = i+1){
+    click(passworld[i])
+}*/
+function main(){
     home()
-    app.launchPackage("com.tencent.wework");//正在执行中找应用
+    launchPackage("com.tencent.wework");//正在执行中找应用
     back()
     back()
     while(!click("工作台"));
@@ -35,24 +41,25 @@ function tim(){
     while(!click("否"))
     sleep(3000)
     while(!input(1,"放假在家"));
-    sleep(2000)
-    click("提交")
-    sleep(1000)
+    sleep(3000)
+    var 提交=text("提交").findOne();
+    log("提交-->"+提交);
+    提交.click();
+    sleep(2000);
 }
-tim()
+main()
 for(var i=0;i<=1;i++){
-    var k = click("确认");
-    if(k){
+    var a = click("确认");
+    if(a){
         toast("签到完成")
-        break;
-        
+        break;       
     }else {
         back()
         back()
-        tim()
+        main()
     }
-    if(i ==1){
-        device.vibrate(2000);
+    if(i==1){
+        device.vibrate(2000);//振动两秒
         break;
     }
     toast(i)
