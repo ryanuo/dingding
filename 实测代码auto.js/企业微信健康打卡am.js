@@ -1,21 +1,10 @@
 device.wakeUp() //唤醒屏幕
 sleep(1000);
 "auto";
-/**
- * 同时模拟一个个手势：
- * 从(300, 1400)到(300, 400)
- * 每一个的时长都为350毫秒
- */
 gestures([1200, [300, 1400], [300, 400]]);
-/*var passworld = "xxxxxx"
-var len = passworld.length
-toast(len)
-for(var i = 0; i<=len;i = i+1){
-    click(passworld[i])
-}*/
 function main(){
     home()
-    launchPackage("com.tencent.wework");//正在执行中找应用
+    app.launchPackage("com.tencent.wework");//正在执行中找应用
     back()
     back()
     while(!click("工作台"));
@@ -58,10 +47,5 @@ for(var i=0;i<=1;i++){
         back()
         main()
     }
-    if(i==1){
-        device.vibrate(2000);//振动两秒
-        break;
-    }
-    toast(i)
-    
+    toast("执行的次数为"+i) 
 }
