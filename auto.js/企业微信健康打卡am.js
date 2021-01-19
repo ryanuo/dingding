@@ -8,7 +8,7 @@ function main_1() {
     toast(secrets)
     for (var i = 0; i <= secrets; i = i + 1) {
         click(unlock[i]);
-        log(unlock[i])
+        log(unlock[i])//反馈数据到console控制台
         sleep(1000)
     }
 }
