@@ -1,3 +1,9 @@
+//设定号系统闹钟，并将指令打开，用闹钟来代替唤醒屏幕，因为有时候auto.js会失效
+
+sleep(2000)
+click("关闭")//闹钟唤醒后2秒关闭
+sleep(1500)//1.5秒后执行下个项目
+main_1()
 function main_1() {
     device.wakeUp();
     sleep(1000)
@@ -12,10 +18,10 @@ function main_1() {
         sleep(1000)
     }
 }
-main_1()
 function main(){
     home()
-    app.launchPackage("com.tencent.wework");//正在执行中找应用
+    launchApp("企业微信")//这里老是失效
+    // app.launchPackage("com.tencent.wework");//正在执行中找应用
     back()
     back()
     while(!click("工作台"));
@@ -40,16 +46,18 @@ function main(){
     sleep(2000)
     while(!click("否"))
     sleep(3000)
-    while(!input(1,"放假在家"));
+    while(!input(3,"放假在家"));//填写备注信息可省略
     sleep(3000)
     var 提交=text("提交").findOne();
     log("提交-->"+提交);
     提交.click();
     sleep(2000);
 }
+sleep(2000)
 main()
 for(var i=0;i<=1;i++){
     var a = click("确认");
+    a.click();
     if(a){
         toast("签到完成")
         break;       

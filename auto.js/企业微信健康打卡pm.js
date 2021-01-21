@@ -1,3 +1,9 @@
+//设定号系统闹钟，并将指令打开，用闹钟来代替唤醒屏幕，因为有时候auto.js会失效
+
+sleep(2000)
+click("关闭")//闹钟唤醒后2秒关闭
+sleep(1500)//1.5秒后执行下个项目
+
 function main_1() {
     device.wakeUp();
     sleep(1000)
@@ -15,7 +21,8 @@ function main_1() {
 main_1()
 function main(){
     home()
-    app.launchPackage("com.tencent.wework");//正在执行中找应用
+    launchApp("企业微信")
+    // app.launchPackage("com.tencent.wework");//正在执行中找应用
     back()
     back()
     while(!click("工作台"));
@@ -40,6 +47,7 @@ function main(){
 main()
 for(var i=0;i<=1;i++){
     var a = click("确认");
+    a.click();
     if(a){
         toast("签到完成")
         break;       
